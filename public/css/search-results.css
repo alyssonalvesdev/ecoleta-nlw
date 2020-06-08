@@ -1,0 +1,117 @@
+body:after{
+    content: "";
+    position: absolute;
+    background: white;
+    top: 40%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+#page-search-results{
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.logo{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo h2{
+    text-align: left;
+    margin-left: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--title-color);
+}
+
+header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header a span{
+    background-image:url('../ico/arrow-left.svg') ;
+    display: flex;
+    width: 20px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+main{
+    margin-top: 48px;
+
+}
+
+main h4{
+    font-weight: normal;
+    font-family: Roboto, sans-serif;
+    margin-bottom: 32px;
+}
+
+main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+
+main img{
+    width: 100%;
+    height: 200px;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.noresult{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13vh;
+}
+
+.noresult img{
+    height: 200px;
+    width: 200px;
+    border-radius: 60px;
+}
+
+main h1{
+    color: #323153;
+    margin: 32px;
+    font-size: 36px;
+    line-height: 41px;
+
+}
+
+main h3{
+    margin: 24px 0;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 34px;
+    color:var(--primary-color);
+}
+
+main p{
+    font-size: 16px;
+    line-height: 26px;
+    color: #6c6c80;
+}

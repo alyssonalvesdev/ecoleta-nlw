@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    --bg:#f0f0f5;
+    --title-color:#322153;
+    --paragrafo-color:#000000;
+    --primary-color:#34cb79;
+    --color-write: #f0f0f5;
+}
+
+body {
+    background: var(--bg);
+    -webkit-font-smoothing:antialiased;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+

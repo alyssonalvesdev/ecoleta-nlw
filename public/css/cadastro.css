@@ -1,0 +1,168 @@
+.page-cadastro{
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.logo{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo h2{
+    text-align: left;
+    margin-left: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--title-color);
+}
+
+header a{
+    color: var(--title-color);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header a span{
+    background-image:url('../ico/arrow-left.svg') ;
+    display: flex;
+    width: 20px;
+    height: 24px;
+    margin-right: 16px;
+}
+
+form{
+    background-color: white;
+    padding: 64px;
+    border-radius: 8px;
+    margin: 80px auto;
+    max-width: 730px;
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+font h2{
+    font-size: 24px;
+}
+
+form fieldset{
+    margin-top:64px;
+    border: 0;
+}
+
+form legend{
+    margin-bottom: 40px;
+}
+
+form .dados{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 24px;
+}
+
+form .dados-agrupado{
+    display: flex;
+}
+
+form input,
+form select{
+    background-color: #f0f0f5;
+    border:0;
+    border-radius: 8px;
+    padding: 16px 24px;
+    font-size: 16px;
+    outline: none;
+}
+
+/*Google Chrome*/
+form select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+form .dados-agrupado .dados + .dados{
+    margin-left: 24px;
+}
+
+form button{
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    font-weight:bold;
+    border: 0;
+    margin-top: 40px;
+    transition:backgound-color 400ms;
+}
+
+form button:hover{
+    background-color: #2fb86e;
+}
+
+.items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:16px;
+}
+.items-grid li{
+    background-color: #f5f5f5;
+    list-style: none;
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    cursor: pointer;
+}
+.items-grid li span{
+    margin-top: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    color: var(--title-color);
+}
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79;
+    align-items: center;
+}
+
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;
+}
+
+.botao{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}

@@ -1,0 +1,117 @@
+{% extends "layout.html"%}}
+
+{% set page = "page-cadastro" %}
+
+{% block styles%}
+    <link rel="stylesheet" type="text/css" href="/css/cadastro.css">
+    <link rel="stylesheet" type='text/css' href="/css/modal.css">
+{% endblock styles%}
+
+</head>
+<body>
+    {% block main%}
+        {% include "partes/page-home.html" %}
+        <header>
+            <div class="logo">
+                <img src="/ico/logorecycle.svg" alt="Logo Ecoleta">
+                <h2>Ecoleta</h2>
+            </div>
+                <a href="/">
+                <span></span>
+                Pagina Principal
+                </a>
+        </header>
+        <main>
+            <form action="/savepoint" method="POST">
+                <h1>Cadastro ponto de coleta</h1>
+
+                <fieldset>
+                    <legend>
+                        <h2>Dados da entidade</h2>
+                    </legend>
+                    <div class="dados">
+                        <label for="name">Nome da entidade:</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="dados-agrupado">
+                        <div class="dados">
+                            <label for="address">Endereço</label>
+                            <input type="text" name="address" required>
+                        </div>
+                        <div class="dados">
+                            <label for="address2">Número/Complemento</label>
+                            <input type="text" name="address2" required>
+                        </div>
+                    </div>
+                    <div class="dados-agrupado">
+                        <div class="dados">
+                            <label for="state">Estado</label>
+                            <select name="uf" required="required">
+                                <option value="">Selecione o Estado</option>
+                            </select>
+                            <input type="hidden" name="state">
+                        </div>
+                        <div class="dados">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled="disabled" required="required">
+                                <option value="">Selecione a Cidade</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="dados">
+                        <label for="" >Cadastre um imagem:</label>
+                        <input type="url" name="image" placeholder="https://" required>
+                    </div>
+
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        <h2>Ítens de coleta</h2>
+                    </legend>
+                    <div class="items-grid">
+                        <li data-id="Lâmpadas">
+                            <img src="/ico/lampadas.svg" alt="Lâmpadas">
+                            <span>Lâmpadas</span>
+                        </li>
+                        <li data-id="Pilha e Baterias">
+                            <img src="/ico/baterias.svg" alt="Pilha e Baterias">
+                            <span>Pilha e Baterias</span>
+                        </li>
+                        <li data-id="Papéis de Papelão">
+                            <img src="/ico/papeis-papelao.svg" alt="Papéis e Papelão">
+                            <span>Papéis de Papelão</span>
+                        </li>
+                        <li data-id="Resíduoa Eletronicos">
+                            <img src="/ico/eletronicos.svg" alt="Resíduoa Eletronicos">
+                            <span>Resíduoa Eletronicos</span>
+                        </li>
+                        <li data-id="Resíduoa Orgânicos">
+                            <img src="/ico/organicos.svg" alt="Resíduoa Orgânicos">
+                            <span>Resíduoa Orgânicos</span>
+                        </li>
+                        <li data-id="Óleo de cozinha">
+                            <img src="/ico/oleo.svg" alt="Óleo de cozinha">
+                            <span>Óleo de cozinha</span>
+                        </li>
+                    </div>
+                    <input type="hidden" name="items">
+                </fieldset>
+                <div class="botao">
+                    <button type="submit" > Cadastrar ponto</button>
+                </div>
+            </form>   
+            {% endblock main%}
+        </main>
+
+        {% block modal %}
+            {% if saved %}
+                {% include "partes/saved.html"%}
+            {% endif %}    
+        {% endblock modal %}
+
+    {% block scripts%}
+    <script src="/scripts/cadastro.js"></script>
+    <script src="/scripts/dark.js"></script>
+    {% endblock scripts%}
+</body>
+</html>

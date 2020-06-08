@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da pesquisa</title>
+
+    <!--Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@700&family=Fira+Sans:wght@800&display=swap" rel="stylesheet">
+
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/css/search-results.css">
+    <link rel="stylesheet" type="text/css" href="/css/dark.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/responsive.css">
+</head>
+<body>
+    <div id="page-search-results">
+
+        {% include "partes/page-home.html" %}
+
+        <header>
+            <div class="logo">
+                <img src="/ico/logorecycle.svg" alt="Logo Ecoleta">
+                <h2>Ecoleta</h2>
+            </div>
+            <a href="/">
+            <span></span>
+            Pagina Principal
+            </a>
+        </header>
+        <main>
+
+            {% if total > 0 %}
+
+            <h4>
+                <strong>{{total}} pontos</strong> encontrados
+            </h4>
+            <div class="cards">
+                <!-- Variavel de mostrar os cards-->
+                {% for place in places %}
+                <div class="card">
+                    <img src="{{ place.image }}" alt="{{ place.name }}">
+                    <h1>{{ place.name }}</h1>
+                    <h3>{{ place.items }}</h3>
+                    <p>
+                        {{ place.state}}, {{ place.city}} <br/>
+                        {{ place.address}}<br/>
+                        {{ place.address2}}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+
+            {%else%}
+
+            <h4><strong>Nenhum</strong> local cadastrado</h4>
+            <div class="noresult">
+                <img src="/img/coletavazia.png" alt="Carinha triste">
+            </div>
+            {% endif %}
+        </main>
+    </div>
+    <script src="/scripts/dark.js"></script>    
+</body>
+</html>

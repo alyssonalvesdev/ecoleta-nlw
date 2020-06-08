@@ -1,0 +1,50 @@
+.modo-dark{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    margin-top: 10px;
+    margin-right: 25px;
+    max-height: 10px;
+}
+
+input[type=checkbox]{
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+.dark {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 35px;
+    height: 18px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+}
+
+.dark::after{
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+}
+
+input:checked + .dark {
+    background-color: var(--color-headings);
+}
+
+input:checked + .dark::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+}
+
+.dark:active:after {
+    width: 45px;
+}

@@ -1,0 +1,114 @@
+
+#page-home{
+    background: url('../ico/home-background.svg');
+    height: 100vh;
+    background-position: 35vw bottom;
+    background-repeat: no-repeat;
+}
+
+header {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo h2{
+    text-align: left;
+    margin-left: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: var(--title-color);
+}
+
+.content{
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header a {
+    display: flex;
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+header a span{
+    display: flex;
+    background-image: url('../ico/log-in.svg');
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+main{
+    max-width: 560px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main h1{
+    color: var(--title-color);
+    font-size: 54px;
+}
+
+main p{
+    color:var(--paragrafo-color);
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+main a {
+    width: 100%;
+    max-width: 360px;
+    background: var(--primary-color);
+    height: 72px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    transition: 400ms;
+}
+
+main a:hover{
+    background: #2fb86e;
+}
+
+main a span{
+    width: 72px;
+    height: 72px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+main a span::after{
+    content: "";
+    background-image: url('../ico/search.svg');
+    width: 20px;
+    height: 20px;
+}
+
+a strong{
+    color: white;
+    flex: 1;
+    text-align: center;
+}
+
